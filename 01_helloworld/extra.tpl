@@ -47,8 +47,8 @@ window.onload = add_validation_links;
 <main>
 <h1>Miscellaneous Page</h1>
 
-<p>Add <code>/[message]</code> (example: <code>/New York</code>) to change
-the message.</p>
+<p>This is the page for extra topics not covered on the homepage.</p>
+<a href= "index.tpl">Click to go to the homepage.</a>
 </main>
 
 <footer>
