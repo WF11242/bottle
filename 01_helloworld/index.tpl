@@ -46,7 +46,7 @@ window.onload = add_validation_links;
 <main>
 <h1>Hello World in a Bottle</h1>
 
-<a>Next Page</a>
+<a href= "extra.tpl">Next Page</a>
 </main>
 
 </head>
