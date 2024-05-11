@@ -2,15 +2,15 @@
 import bottle
 
 @bottle.route('/')
-def index():
-    return bottle.template('index')
-
-@bottle.route('/page1')
-def page1():
-    return bottle.template('page1')
-
-@bottle.route('/page2')
-def page2():
-    return bottle.template('page2')
+@bottle.route('/<name>')
+@bottle.route('/<name>/<number>')
+def different_index(name='', number=''):
+    if not name and not number:
+        return bottle.template('welcome')
+    if name and not number:
+        the_message = f'The name {name} was passed to me!'
+    else:
+        the_message = f'Received name {name} and number {number}!'
+    return bottle.template('message', message=the_message)
 
 bottle.run(host='0.0.0.0', port=8090)
