@@ -7,3 +7,4 @@ def index():
 def message(name):
     the_message = f'Hello {name}!'
     return bottle.template('message_template', message=the_message)
+bottle.run(host='0.0.0.0', port=8090)
